@@ -17,7 +17,7 @@ public:
 
 	int length;
 
-	List() : head(NULL), length(0) {}
+	List() : head(NULL), tail(NULL), length(0) {}
 
 
 	Node* getNode(int index) {
