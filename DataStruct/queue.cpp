@@ -48,6 +48,5 @@ int main() {
 		else if (str == "front") { cout << front() << endl; }
 		else if (str == "back") { cout << back() << endl; }
 	}
-	system("pause");
 	return 0;
 }
