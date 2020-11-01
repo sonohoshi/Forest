@@ -25,21 +25,24 @@ int main() {
 		hall[rightAnser] = true;
 		// cout << "\n\n" << rightAnser + 1 << "번이 정답입니다.\n";
 
-		for (int j = 0; j < 3; j++) {
-			if (left == -1 && !hall[j]) {
-				left = j;
-			} else if (left != -1 && !hall[j]) {
-				right = j;
-			}
-		}
-
 		// printf("left : %d, right : %d\n", left + 1, right + 1);
 		cout << "1/2/3 중 정답이라고 생각되는 것을 입력해주세요 >> ";
 		
 		cin >> beforeAnswer;
 		beforeAnswer -= 1;
 		
-		cout << (rand() % 1 ? left + 1 : right + 1) << "번째는 답이 아닙니다. 다시 한번 입력해주세요.\n";
+		for (int j = 0; j < 3; j++) {
+			if (j != beforeAnswer) {
+				if (left == -1) {
+					left = j;
+				}
+				else {
+					right = j;
+				}
+			}
+		}
+
+		cout << (hall[left] ? right + 1 : left + 1) << "번째는 답이 아닙니다. 다시 한번 입력해주세요.\n";
 		cin >> afterAnswer;
 		afterAnswer -= 1;
 		if (hall[afterAnswer]) {
