@@ -1,0 +1,6 @@
+C:\Users\82108\WorkSpace\Forest\GameAlgorithm\Algorithm\Algorithm\bin\Debug\Algorithm.exe
+C:\Users\82108\WorkSpace\Forest\GameAlgorithm\Algorithm\Algorithm\bin\Debug\Algorithm.pdb
+C:\Users\82108\WorkSpace\Forest\GameAlgorithm\Algorithm\Algorithm\obj\Debug\Algorithm.csprojAssemblyReference.cache
+C:\Users\82108\WorkSpace\Forest\GameAlgorithm\Algorithm\Algorithm\obj\Debug\Algorithm.csproj.CoreCompileInputs.cache
+C:\Users\82108\WorkSpace\Forest\GameAlgorithm\Algorithm\Algorithm\obj\Debug\Algorithm.exe
+C:\Users\82108\WorkSpace\Forest\GameAlgorithm\Algorithm\Algorithm\obj\Debug\Algorithm.pdb
