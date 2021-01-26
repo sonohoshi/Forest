@@ -22,7 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6520c273-00f8-435e-a0d4-3edb1c008b1c" name="Default Changelist" comment="" />
+    <list default="true" id="6520c273-00f8-435e-a0d4-3edb1c008b1c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Algorithm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Algorithm/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/Board.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/Board.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/bin/Debug/Algorithm.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/bin/Debug/Algorithm.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/bin/Debug/Algorithm.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/bin/Debug/Algorithm.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/obj/Debug/Algorithm.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/obj/Debug/Algorithm.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Algorithm/obj/Debug/Algorithm.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/obj/Debug/Algorithm.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +87,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611580902300</updated>
-      <workItem from="1611580908389" duration="3316000" />
+      <workItem from="1611580908389" duration="7853000" />
+      <workItem from="1611668890968" duration="2012000" />
     </task>
     <servers />
   </component>
@@ -97,6 +105,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -110,22 +119,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="130" y="102" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1611583235897" />
-    <state width="1493" height="115" key="GridCell.Tab.0.bottom" timestamp="1611584173484">
+    <state width="1493" height="115" key="GridCell.Tab.0.bottom" timestamp="1611673030809">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1611584173484" />
-    <state width="1493" height="115" key="GridCell.Tab.0.center" timestamp="1611584173484">
+    <state width="1493" height="115" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1611673030809" />
+    <state width="1493" height="115" key="GridCell.Tab.0.center" timestamp="1611673030809">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1611584173484" />
-    <state width="1493" height="115" key="GridCell.Tab.0.left" timestamp="1611584173484">
+    <state width="1493" height="115" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1611673030809" />
+    <state width="1493" height="115" key="GridCell.Tab.0.left" timestamp="1611673030809">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1611584173484" />
-    <state width="1493" height="115" key="GridCell.Tab.0.right" timestamp="1611584173484">
+    <state width="1493" height="115" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1611673030809" />
+    <state width="1493" height="115" key="GridCell.Tab.0.right" timestamp="1611673030809">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1611584173484" />
+    <state width="1493" height="115" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1611673030809" />
     <state x="277" y="62" key="SettingsEditor" timestamp="1611581108291">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
