@@ -89,27 +89,27 @@ namespace Algorithm
                     if ((j % 2 == 0 || i % 2 == 0) || (i == Size - 2 && i == j))
                         continue;
                     
-                    if (j == Size - 2)
+                    if (i == Size - 2)
                     {
-                        Tile[j, i + 1] = (int) TileType.Empty;
+                        Tile[i, j + 1] = (int) TileType.Empty;
                         continue;
                     }
                     
-                    if (i == Size - 2)
+                    if (j == Size - 2)
                     {
-                        Tile[j + 1, i] = (int) TileType.Empty;
+                        Tile[i + 1, j] = (int) TileType.Empty;
                         continue;
                     }
 
                     if (GetRandomBoolean())
                     {
-                        Tile[j, i + 1] = (int) TileType.Empty;
+                        Tile[i, j + 1] = (int) TileType.Empty;
                         cnt++;
                     }
                     else
                     {
                         int randIndex = rand.Next(0, cnt);
-                        Tile[j + 1, i - randIndex] = (int) TileType.Empty;
+                        Tile[i + 1, j - randIndex * 2] = (int) TileType.Empty; // out of range
                         cnt = 1;
                     }
                 }
@@ -136,25 +136,25 @@ namespace Algorithm
                 {
                     if ((j % 2 == 0 || i % 2 == 0) || (j == Size - 2 && i == j))
                         continue;
-                    if (j == Size - 2)
+                    if (i == Size - 2)
                     {
-                        Tile[j, i + 1] = (int) TileType.Empty;
+                        Tile[i, j + 1] = (int) TileType.Empty;
                         continue;
                     }
                     
-                    if (i == Size - 2)
+                    if (j == Size - 2)
                     {
-                        Tile[j + 1, i] = (int) TileType.Empty;
+                        Tile[i + 1, j] = (int) TileType.Empty;
                         continue;
                     }
 
                     if (GetRandomBoolean())
                     {
-                        Tile[j, i + 1] = (int) TileType.Empty;
+                        Tile[i, j + 1] = (int) TileType.Empty;
                     }
                     else
                     {
-                        Tile[j + 1, i] = (int) TileType.Empty;
+                        Tile[i + 1, j] = (int) TileType.Empty;
                     }
                 }
             }
