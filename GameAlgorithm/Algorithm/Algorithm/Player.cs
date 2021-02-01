@@ -11,7 +11,7 @@ namespace Algorithm
         public int x { get; private set; }
         public int y { get; private set; }
 
-        public void Initialize(int x, int y, int destX, int destY, Board board)
+        public void Initialize(int x, int y, Board board)
         {
             this.x = x;
             this.y = y;
@@ -21,6 +21,8 @@ namespace Algorithm
             {
                 rand = new Random();
             }
+
+            
         }
         
         private const int moveTick = 100;

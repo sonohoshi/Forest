@@ -7,7 +7,8 @@ namespace Algorithm
         public enum TileType : int
         {
             Empty = 0,
-            Wall = 1
+            Wall = 1,
+            
         }
         private const char circle = '\u25cf';
         private static Random rand = new Random();
@@ -17,9 +18,14 @@ namespace Algorithm
         public int[,] Tile { get; private set; }
         public int Size { get; private set; }
 
-        public void Initialize(int size,Player player)
+        public int DestX { get; private set; }
+        public int DestY { get; private set; }
+
+        public void Initialize(int size, Player player)
         {
             this.player = player;
+
+            DestX = DestY = size - 2;
             
             if (size % 2 == 0)
             {
@@ -44,6 +50,10 @@ namespace Algorithm
                     if (i == player.y && j == player.x)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGray;
+                    }
+                    else if(i == DestY && j == DestX)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                     }
                     else
                     {
@@ -79,27 +89,27 @@ namespace Algorithm
                     if ((j % 2 == 0 || i % 2 == 0) || (i == Size - 2 && i == j))
                         continue;
                     
-                    if (i == Size - 2)
+                    if (j == Size - 2)
                     {
-                        Tile[i, j + 1] = (int) TileType.Empty;
+                        Tile[j, i + 1] = (int) TileType.Empty;
                         continue;
                     }
                     
-                    if (j == Size - 2)
+                    if (i == Size - 2)
                     {
-                        Tile[i + 1, j] = (int) TileType.Empty;
+                        Tile[j + 1, i] = (int) TileType.Empty;
                         continue;
                     }
 
                     if (GetRandomBoolean())
                     {
-                        Tile[i, j + 1] = (int) TileType.Empty;
+                        Tile[j, i + 1] = (int) TileType.Empty;
                         cnt++;
                     }
                     else
                     {
                         int randIndex = rand.Next(0, cnt);
-                        Tile[i + 1, j - randIndex] = (int) TileType.Empty;
+                        Tile[j + 1, i - randIndex] = (int) TileType.Empty;
                         cnt = 1;
                     }
                 }
