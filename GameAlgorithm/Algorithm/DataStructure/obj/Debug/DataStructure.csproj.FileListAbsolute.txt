@@ -1,0 +1,6 @@
+C:\Users\82108\WorkSpace\Forest\GameAlgorithm\Algorithm\DataStructure\bin\Debug\DataStructure.exe
+C:\Users\82108\WorkSpace\Forest\GameAlgorithm\Algorithm\DataStructure\bin\Debug\DataStructure.pdb
+C:\Users\82108\WorkSpace\Forest\GameAlgorithm\Algorithm\DataStructure\obj\Debug\DataStructure.csprojAssemblyReference.cache
+C:\Users\82108\WorkSpace\Forest\GameAlgorithm\Algorithm\DataStructure\obj\Debug\DataStructure.csproj.CoreCompileInputs.cache
+C:\Users\82108\WorkSpace\Forest\GameAlgorithm\Algorithm\DataStructure\obj\Debug\DataStructure.exe
+C:\Users\82108\WorkSpace\Forest\GameAlgorithm\Algorithm\DataStructure\obj\Debug\DataStructure.pdb
