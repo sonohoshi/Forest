@@ -61,12 +61,42 @@ namespace DataStructure
                     if(!visited[i]) DFS(i);
                 }
             }
+
+            public void BFS(int start)
+            {
+                bool[] found = new bool[6];
+                int[] parent = new int[6];
+                int[] distance = new int[6];
+                
+                Queue<int> queue = new Queue<int>();
+                queue.Enqueue(start);
+                found[start] = true;
+                parent[start] = start;
+                distance[start] = 0;
+
+                while (queue.Count > 0)
+                {
+                    int now = queue.Dequeue();
+                    Console.WriteLine(now);
+
+                    for (int i = 0; i < adj.GetLength(0); i++)
+                    {
+                        // 연결되지 않았거나 이미 발견된 노드라면 스킵
+                        if(adj[now, i] == 0 || found[i]) continue;
+                        
+                        queue.Enqueue(i);
+                        found[i] = true;
+                        parent[i] = now;
+                        distance[i] = distance[now] + 1;
+                    }
+                }
+            }
         }
         
         public static void Main(string[] args)
         {
             Graph graph = new Graph();
-            graph.SearchAllWithDFS();
+            graph.BFS(0);
         }
     }
 }
