@@ -34,7 +34,6 @@ namespace Algorithm
                 Console.SetCursorPosition(0, 0);
                 board.Render();
                 #endregion
-                
             }
         }
     }

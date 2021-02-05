@@ -34,7 +34,7 @@ namespace Algorithm
             
             Tile = new int[size, size];
             this.Size = size;
-
+ 
             //GenerateMazeByBinaryTree();
             GenerateMazeBySideWinder();
         }
