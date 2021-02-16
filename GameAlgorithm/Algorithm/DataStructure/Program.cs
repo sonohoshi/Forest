@@ -136,12 +136,75 @@ namespace DataStructure
                 }
             }
         }
+
+        class Tree<T>
+        {
+            public T Data { get; set; }
+            public List<Tree<T>> Children { get; set; } = new List<Tree<T>>();
+        }
+
+        private static Tree<string> MakeTree()
+        {
+            Tree<string> root = new Tree<string> {Data = "R1 개발실"};
+            {
+                {
+                    Tree<string> node = new Tree<string> {Data = "디자인팀"};
+                    node.Children.Add(new Tree<string>{Data = "전투"});
+                    node.Children.Add(new Tree<string>{Data = "경제"});
+                    node.Children.Add(new Tree<string>{Data = "스토리"});
+                    root.Children.Add(node);
+                }
+                {
+                    Tree<string> node = new Tree<string> {Data = "프로그래밍팀"};
+                    node.Children.Add(new Tree<string>{Data = "서버"});
+                    node.Children.Add(new Tree<string>{Data = "클라이언트"});
+                    node.Children.Add(new Tree<string>{Data = "엔진"});
+                    root.Children.Add(node);
+                }
+                {
+                    Tree<string> node = new Tree<string> {Data = "아트팀"};
+                    node.Children.Add(new Tree<string>{Data = "배경"});
+                    node.Children.Add(new Tree<string>{Data = "캐릭터"});
+                    root.Children.Add(node);
+                }
+            }
+
+            return root;
+        }
+
+        private static void PrintTree(Tree<string> root)
+        {
+            Console.WriteLine(root.Data);
+            foreach (var child in root.Children)
+            {
+                PrintTree(child);
+            }
+        }
+
+        private static int GetHeight<T>(Tree<T> root)
+        {
+            int height = 0;
+
+            foreach (var child in root.Children)
+            {
+                int newHeight = GetHeight<T>(child) + 1;
+                height = Math.Max(height, newHeight);
+            }
+            
+            return height;
+        }
         
         public static void Main(string[] args)
         {
+            /*
             Graph graph = new Graph();
             graph.BFS(0);
             graph.Dijikstra(0);
+            */
+
+            var root = MakeTree();
+            PrintTree(root);
+            Console.WriteLine(GetHeight(root));
         }
     }
 }
