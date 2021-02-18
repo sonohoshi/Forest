@@ -181,6 +181,68 @@ namespace DataStructure
             }
         }
 
+        class QuadTree
+        {
+            public KeyValuePair<int, int> Data { get; set; }
+            public List<QuadTree> Children { get; set; }
+            
+            public QuadTree()
+            {
+                Data = new KeyValuePair<int, int>();
+                Children = new List<QuadTree>();
+            }
+            
+            public QuadTree(int n, int m)
+            {
+                Data = new KeyValuePair<int, int>(n, m);
+                Children = new List<QuadTree>();
+            }
+
+            private static int x = 0;
+            public void InOrderTraversal(QuadTree tree, int y)
+            {
+                if (tree == null) return;
+                if (tree.Children.Count < 4)
+                {
+                    //Console.WriteLine(tree.Data);
+                    Console.WriteLine($"[{++x}, {y}]");
+                    return;
+                }
+
+                InOrderTraversal(tree.Children[0], y - 1);
+                InOrderTraversal(tree.Children[1], y - 1);
+                //Console.WriteLine(tree.Data);
+                Console.WriteLine($"[{++x}, {y}]");
+                InOrderTraversal(tree.Children[2], y - 1);
+                InOrderTraversal(tree.Children[3], y - 1);
+            }
+        }
+
+        private static QuadTree MakeQuadTree()
+        {
+            var root = new QuadTree(7, 0);
+            {
+                root.Children.Add(new QuadTree(1, -1));
+                root.Children.Add(new QuadTree(4, -1));
+                root.Children.Add(new QuadTree(10, -1));
+                root.Children.Add(new QuadTree(13, -1));
+            }
+            {
+                root.Children[1].Children.Add(new QuadTree(2, -2));
+                root.Children[1].Children.Add(new QuadTree(3, -2));
+                root.Children[1].Children.Add(new QuadTree(5, -2));
+                root.Children[1].Children.Add(new QuadTree(6, -2));
+            }
+            {
+                root.Children[2].Children.Add(new QuadTree(8, -2));
+                root.Children[2].Children.Add(new QuadTree(9, -2));
+                root.Children[2].Children.Add(new QuadTree(11, -2));
+                root.Children[2].Children.Add(new QuadTree(12, -2));
+            }
+
+            return root;
+        }
+
         private static int GetHeight<T>(Tree<T> root)
         {
             int height = 0;
@@ -202,9 +264,14 @@ namespace DataStructure
             graph.Dijikstra(0);
             */
 
+            /*
             var root = MakeTree();
             PrintTree(root);
             Console.WriteLine(GetHeight(root));
+            */
+
+            var quadTree = MakeQuadTree();
+            quadTree.InOrderTraversal(quadTree, 0);
         }
     }
 }
