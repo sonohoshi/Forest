@@ -202,7 +202,7 @@ namespace DataStructure
             public void InOrderTraversal(QuadTree tree, int y)
             {
                 if (tree == null) return;
-                if (tree.Children.Count < 4)
+                if (tree.Children.Count == 0)
                 {
                     //Console.WriteLine(tree.Data);
                     Console.WriteLine($"[{++x}, {y}]");
