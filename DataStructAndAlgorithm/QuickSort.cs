@@ -8,8 +8,8 @@ public static class Extensions
 
         while (leftIndex < rightIndex)
         {
-            if ((leftIndex <= right) && (arr[leftIndex] < pivotValue)) leftIndex++;
-            if ((rightIndex >= left) && (arr[rightIndex] > pivotValue)) rightIndex--;
+            while ((leftIndex <= right) && (arr[leftIndex] < pivotValue)) leftIndex++;
+            while ((rightIndex >= left) && (arr[rightIndex] > pivotValue)) rightIndex--;
 
             if (leftIndex < rightIndex)
             {
